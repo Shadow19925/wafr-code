@@ -1,0 +1,251 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* -------------------- Home -------------------- */
+  .home {
+    @apply grid grid-rows-[auto_1fr_auto] min-h-screen;
+    main {
+      @apply flex-1;
+    }
+  }
+
+  /* -------------------- Divider -------------------- */
+  .divider {
+    @apply flex items-center w-full max-w-7xl mx-auto mt-44 mb-16;
+
+    .divider-line {
+      @apply flex-1 border-b-2 border-[#15CEAA];
+    }
+
+    .divider-circle {
+      @apply w-5 h-5 rounded-full bg-[#15CEAA];
+    }
+  }
+
+  /* -------------------- Hero -------------------- */
+  .hero {
+    @apply h-screen flex flex-col items-center bg-[#1E0081];
+
+    .hero-title {
+      @apply text-7xl font-bold text-white mb-4 relative top-1/4 text-center max-w-max md:mt-5;
+
+      strong {
+        @apply text-[#FFCF45];
+      }
+    }
+
+    .hero-description {
+      @apply text-white relative top-1/4 text-center mt-4 font-semibold;
+    }
+
+    .hero-image {
+      @apply relative top-1/4 mt-[11.2rem] max-w-min p-5 mb-64;
+    }
+  }
+
+  /* -------------------- Header -------------------- */
+  .header {
+    @apply flex items-center justify-center w-full min-h-[200px] h-1/2 max-h-[400px] bg-[#1E0081];
+
+    .header-container {
+      @apply flex items-center justify-between w-1/2 p-5 bg-white rounded-xl;
+    }
+
+    .logo {
+      @apply flex items-center justify-center;
+
+      img {
+        @apply h-20;
+      }
+
+      h1 {
+        @apply text-xl font-bold text-[#023358];
+      }
+    }
+
+    ul {
+      @apply flex list-none space-x-8 text-[#023358];
+    }
+
+    li {
+      @apply text-lg font-semibold hover:text-orange-500 transition;
+    }
+
+    .header-actions {
+      @apply flex items-center space-x-4;
+
+      .join-button {
+        @apply bg-orange-500 text-white px-4 py-2 rounded hover:bg-[#1E0081] transition;
+      }
+
+      .login-button {
+        @apply text-[#1E0081] px-4 py-2 rounded border border-[#1E0081] hover:bg-[#1E0081] hover:text-white transition duration-300;
+      }
+    }
+
+    .language-switcher {
+      @apply flex items-center space-x-2;
+
+      button {
+        @apply text-[#1E0081] px-2 py-2 rounded border border-[#1E0081] hover:bg-[#1E0081] hover:text-white transition duration-300;
+      }
+    }
+  }
+
+  /* -------------------- Header Mobile -------------------- */
+  .header-mobile {
+    @apply flex items-center justify-between p-4 bg-white shadow-md;
+
+    .logo {
+      @apply flex items-center;
+
+      img {
+        @apply h-16 mr-2;
+      }
+
+      h1 {
+        @apply text-xl font-bold text-[#1E0081];
+      }
+    }
+
+    .language-switcher {
+      @apply flex items-center space-x-2;
+
+      button {
+        @apply text-white px-3 py-1 rounded hover:bg-[#0671c2] transition;
+      }
+    }
+
+    .mobile-menu {
+      @apply absolute top-0 left-0 w-full h-full z-50 bg-[#1E0081] shadow-md flex flex-col items-center justify-start;
+
+      .mobile-header {
+        @apply flex items-center justify-between pr-3 bg-white mb-24;
+      }
+
+      .mobile-menu-list {
+        @apply flex flex-col justify-center items-center list-none p-4 space-y-24 text-white;
+
+        li {
+          @apply text-3xl font-semibold hover:text-orange-500 transition;
+        }
+      }
+
+      .logo {
+        @apply flex items-center;
+
+        img {
+          @apply h-10 mr-2;
+        }
+
+        h1 {
+          @apply text-xl font-bold text-[#023358];
+        }
+      }
+
+      .language-switcher {
+        @apply flex items-center justify-center space-x-2 border-t mt-72 border-white p-4;
+
+        button {
+          @apply bg-white text-[#1E0081] px-3 py-1 rounded hover:bg-orange-500 hover:text-white transition duration-300;
+        }
+      }
+    }
+  }
+  .our-features {
+    @apply py-10 text-[#1F0084] flex flex-col 
+    justify-center items-center;
+
+    /* Section title */
+    h2 {
+      @apply text-4xl font-bold text-end  mb-12;
+    }
+    .features-list {
+      @apply flex gap-10 items-center;
+      .feature-image-5 {
+        @apply w-[47%] flex justify-center items-center; /* image column */
+      }
+    }
+
+    /* Individual feature item */
+    .feature {
+      @apply flex items-start mb-12;
+
+      img {
+        @apply w-16 h-16 mb-4;
+      }
+
+      /* Text content next to icon */
+      .feature-text {
+        @apply flex flex-col ml-6;
+
+        h3 {
+          @apply text-2xl  font-semibold mb-2;
+        }
+
+        p {
+          @apply text-gray-600 font-medium;
+        }
+      }
+    }
+  }
+  .our-features .features-Arabic {
+    @apply flex-row-reverse  text-end;
+    .feature-text {
+      @apply ml-0 mr-6;
+    }
+  }
+  /*-------------------- Our Partners -------------------- */
+
+  .our-partners {
+    @apply relative h-[600px]  items-center  flex flex-col sm:flex-row  bg-gray-50;
+    .lanyard-wrapper {
+      @apply relative  bg-transparent z-50 w-full  h-full scale-100;
+    }
+    .partners-image {
+      @apply w-full h-full object-contain m-10;
+    }
+  }
+
+  /*--------------------- subscribation -------------------- */
+  .subscribation {
+    @apply flex flex-col h-screen bg-white  items-center;
+
+    .subscription-title {
+      @apply h-auto  border justify-center items-center mt-20 text-4xl font-bold text-[#1F0084] text-start;
+    }
+    .subscription-message {
+      @apply h-auto border justify-center items-center mt-10 text-lg font-medium text-gray-600 text-start;
+    }
+  }
+  .subscribation-Arabic {
+    .subscription-title {
+      @apply text-end;
+    }
+    .subscription-message {
+      @apply text-end;
+    }
+  }
+
+  /* ------------------------Footer-------------------------------------- */
+  .footer {
+    @apply flex  bg-[#1E0081] text-white py-4 justify-center items-center space-x-16;
+    .footer-content {
+      @apply flex flex-col space-y-5;
+    }
+    h2 {
+      @apply text-2xl font-bold m-4;
+    }
+    p {
+      @apply font-semibold hover:text-orange-500 transition duration-300;
+    }
+    .footer-socials {
+      @apply flex space-x-6;
+    }
+  }
+  .footer-Arabic {
+    @apply flex-row-reverse text-end;
+  }
+}

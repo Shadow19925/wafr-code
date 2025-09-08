@@ -1,0 +1,52 @@
+{
+  "AppName": "WAFR Code",
+
+  "appLayout.subscriptions": "subscriptions",
+  "appLayout.Stores": " our Stores",
+  "appLayout.about": "About Us",
+  "appLayout.join": "Join Us",
+  "appLayout.Login": "Login",
+
+  "heroSubtitle": "Shop freely, save big, and never overpay again! We bring you the best deals and special offers from top brands, small shops, and local stores — all in one place just for you.",
+  "hero": {
+    "Unlock Amazing": "Unlock Amazing",
+    "Discounts": " Discounts",
+    "Today": "Today",
+
+    "mark": "!"
+  },
+
+  "ourFeatures": {
+    "title": "Our Features",
+    "feature1": {
+      "title": "Exclusive Discount Codes",
+      "description": "In Wafr, we provide you with real discount codes directly from stores and partners, so you can enjoy special offers you won’t find anywhere else."
+    },
+    "feature2": {
+      "title": "Paid Subscription Guarantees More",
+      "description": "The paid subscription guarantees you exclusive, trusted discounts and encourages stores to present their best offers only for Wafr customers."
+    },
+    "feature3": {
+      "title": "Discounts at Your Fingertips",
+      "description": "All the trusted discount offers are gathered for you in one platform... so you can shop with ease."
+    },
+    "feature4": {
+      "title": "Real Partnerships",
+      "description": "Partnerships with global and local stores and brands, giving you unique deals that make your shopping experience more enjoyable and unified."
+    }
+  },
+  "footer": {
+    "contactUs": "Contact Us",
+    "ourStores": "Our Stores",
+    "termsOfService": "Terms of Service",
+    "followUs": "Follow Us",
+    "frequentlyAskedQuestions": "Frequently Asked Questions (FAQ)",
+    "subscription": "Subscriptions",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "ourPartners": "Our Partners",
+  "subscriptionPage": {
+    "title": " Wafr Subscription",
+    "welcomeMessage": "Welcome to the Subscription page! Here, you can explore our subscription plans and choose the one that best suits your needs. Enjoy exclusive discounts and offers by subscribing today."
+  }
+}
