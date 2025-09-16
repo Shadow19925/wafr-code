@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
@@ -19,8 +18,8 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 
 // replace with your own imports, see the usage snippet for details
-import cardGLB from "../../../../assets/lanyard/card1.glb";
-import lanyard from "../../../../assets/images/Logo-45.png";
+import cardGLB from "../assets/lanyard/card1.glb";
+import lanyard from "../assets/images/Logo-45.png";
 
 import * as THREE from "three";
 

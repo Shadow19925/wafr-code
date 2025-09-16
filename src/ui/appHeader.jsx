@@ -2,7 +2,7 @@ import { useLanguage } from "../hooks/languageHook";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useScreenSize } from "../hooks/screenHook";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 import Logo from "../assets/images/Logo-image.png";
 import LanguageIcon from "@mui/icons-material/Language";
@@ -14,6 +14,7 @@ export default function AppHeader() {
   const { i18n } = useTranslation();
   const { isMobile } = useScreenSize();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   // console.log("isMobile:", isMobile);
 
@@ -94,7 +95,14 @@ export default function AppHeader() {
         </div>
         <div className="header-actions">
           <button className="join-button">{i18n.t("appLayout.join")}</button>
-          <button className="login-button">{i18n.t("appLayout.Login")}</button>
+          <button
+            onClick={() => {
+              navigate("/login");
+            }}
+            className="login-button"
+          >
+            {i18n.t("appLayout.Login")}
+          </button>
         </div>
 
         <div className="language-switcher">

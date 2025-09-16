@@ -48,5 +48,24 @@
   "subscriptionPage": {
     "title": " Wafr Subscription",
     "welcomeMessage": "Welcome to the Subscription page! Here, you can explore our subscription plans and choose the one that best suits your needs. Enjoy exclusive discounts and offers by subscribing today."
+  },
+  "features": {
+    "title": "Why Choose WAFR Code?",
+    "feature1": {
+      "title": "Exclusive Discounts",
+      "description": "Get discounts you won't find anywhere else through our partnerships with major stores."
+    },
+    "feature2": {
+      "title": "Save Time and Effort",
+      "description": "We save you time and effort in searching for the best deals by gathering them all in one place."
+    },
+    "feature3": {
+      "title": "Trusted Deals",
+      "description": "We only feature verified and reliable discount codes to ensure you have a safe shopping experience."
+    },
+    "feature4": {
+      "title": "User-Friendly Platform",
+      "description": "Our platform is designed to be easy to navigate, making it simple for you to find and use discount codes."
+    }
   }
 }

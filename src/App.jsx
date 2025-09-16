@@ -1,13 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router";
 
 import AppLayout from "./ui/appLayout";
-import Home from "./ui//home/Home";
-import AboutUs from "./ui/aboutUs";
-import Subscription from "./ui/subscription";
-import Login from "./ui/Login";
-import RegisterUser from "./ui/registerUser";
-import NotFound from "./ui/Error";
-import Stores from "./ui/Stores";
+import Home from "./pages/Home/Home";
+import AboutUs from "./pages/aboutUs/aboutUs";
+import Subscription from "./pages/Subscription/subscription";
+import Login from "./pages/Login/Login";
+import Auth from "./pages/Login/authScreen";
+import RegisterUser from "./pages/registerUser/registerUser";
+import NotFound from "./pages/Error/Error";
+import Stores from "./pages/Stores/Stores";
 
 export default function App() {
   // const { lang } = useParams();
@@ -28,6 +29,7 @@ export default function App() {
         { path: "subscription", element: <Subscription /> },
         { path: "login", element: <Login /> },
         { path: "register", element: <RegisterUser /> },
+        { path: "auth", element: <Auth /> },
       ],
     },
   ]);

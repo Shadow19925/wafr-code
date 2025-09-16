@@ -1,10 +1,10 @@
-import Fe1 from "../../../../assets/images/fe-image-1.png";
-import Fe2 from "../../../../assets/images/fe-image-2.png";
-import Fe3 from "../../../../assets/images/fe-image-3.png";
-import Fe4 from "../../../../assets/images/fe-image-4.png";
-import Fe5 from "../../../../assets/images/fe-image-5.png";
+import Fe1 from "../../assets/images/fe-image-1.png";
+import Fe2 from "../../assets/images/fe-image-2.png";
+import Fe3 from "../../assets/images/fe-image-3.png";
+import Fe4 from "../../assets/images/fe-image-4.png";
+import Fe5 from "../../assets/images/fe-image-5.png";
 import { useTranslation } from "react-i18next";
-import FeatureItem from "./featuerItem.jsx";
+import FeatureItem from "../../ui/featuerItem.jsx";
 
 const features = [
   {

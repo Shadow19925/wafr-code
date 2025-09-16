@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import heroImageAr from "../../../../assets/images/hero-ar.png";
-import heroImageEn from "../../../../assets/images/hero-eng.png";
+import heroImageAr from "../assets/images/hero-ar.png";
+import heroImageEn from "../assets/images/hero-eng.png";
 
 export default function Hero1() {
   const { i18n } = useTranslation();

@@ -1,4 +1,4 @@
-import Logo from "../../assets/images/Logo-image.png";
+import Logo from "../assets/images/Logo-image.png";
 import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
 import FacebookIcon from "@mui/icons-material/Facebook";
