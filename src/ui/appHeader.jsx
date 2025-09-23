@@ -94,7 +94,9 @@ export default function AppHeader() {
           </ul>
         </div>
         <div className="header-actions">
-          <button className="join-button">{i18n.t("appLayout.join")}</button>
+          <button onClick={() => navigate("/join")} className="join-button">
+            {i18n.t("appLayout.join")}
+          </button>
           <button
             onClick={() => {
               navigate("/login");

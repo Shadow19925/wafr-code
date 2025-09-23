@@ -213,16 +213,16 @@
   .subscribation {
     @apply flex flex-col bg-white  items-center my-5;
     .subscription-title {
-      @apply h-auto border justify-center items-center mt-16 text-4xl font-bold text-[#1F0084] text-start;
+      @apply h-auto  justify-center items-center mt-16 text-4xl font-bold text-[#1F0084] text-start;
     }
     .subscription-message {
-      @apply h-auto border justify-center items-center mt-10 text-lg font-medium text-gray-600 text-start;
+      @apply h-auto  justify-center items-center mt-10 text-lg font-medium text-gray-600 text-start;
     }
     .subscription-cards-container {
       @apply flex justify-center items-center w-full space-x-10;
     }
     .subscription-plan-cards {
-      @apply flex flex-col mt-10  bg-gray-100 h-1/2 w-2/12 rounded-xl;
+      @apply flex flex-col mt-10  shadow-xl  h-1/2 w-2/12 rounded-xl;
       .subscription-plan-divider {
         @apply border-b-2 w-full border-black border-dashed;
       }
@@ -324,16 +324,33 @@
       h2 {
         @apply text-3xl font-bold text-[#1F0084] mb-6 text-center;
       }
+
       form {
         @apply flex flex-col;
         label {
-          @apply text-lg font-medium mb-2;
+          @apply text-sm font-medium mb-2 text-gray-500;
         }
         input {
-          @apply border border-gray-300 rounded px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-[#1F0084];
+          @apply border border-gray-300 rounded  px-3 py-2 mb-4 focus:outline-none focus:ring-2 focus:ring-[#1F0084];
+        }
+        .error {
+          @apply text-red-500 text-sm mb-4;
         }
         button {
           @apply bg-[#1F0084] text-white px-4 py-2 rounded hover:bg-[#FF5545] transition duration-300;
+        }
+      }
+
+      .forgot-password {
+        @apply mt-4  text-center text-sm text-gray-600;
+        a {
+          @apply text-[#1F0084] font-semibold hover:underline;
+        }
+      }
+      .go-back {
+        @apply text-center text-gray-600 mt-12;
+        a {
+          @apply text-[#1F0084] font-semibold hover:underline;
         }
       }
       .signup-link {
@@ -344,6 +361,178 @@
       }
     }
   }
+  .login-page-Arabic {
+    @apply text-end;
+    .login-container {
+      @apply text-end;
+
+      form {
+        @apply text-end;
+        label {
+          @apply text-end;
+        }
+        input {
+          @apply text-end;
+        }
+        .error {
+          @apply text-end;
+        }
+        placeholder {
+          @apply text-end;
+        }
+      }
+    }
+  }
+  .login-page-Arabic input::placeholder {
+    text-align: right;
+  }
+  /*------------------ about us  --------------------*/
+  .about-us-page {
+    @apply flex flex-col min-h-screen;
+    .about-us-container {
+      @apply flex flex-col bg-white shadow-md rounded-lg overflow-hidden w-3/4 p-8 mt-16 mb-16 self-center;
+      h1 {
+        @apply text-4xl font-bold text-[#1F0084] mb-6;
+      }
+      h2 {
+        @apply text-2xl font-bold text-[#1F0084] mb-4 mt-6;
+      }
+      p {
+        @apply text-gray-600 font-medium mb-4;
+      }
+    }
+  }
+  .about-us-page-Arabic {
+    @apply text-end;
+    .about-us-container {
+      @apply text-end;
+      h1 {
+        @apply text-end;
+      }
+      h2 {
+        @apply text-end;
+      }
+      p {
+        @apply text-end;
+      }
+    }
+  }
+  /*------------------ terms of service --------------------*/
+  .terms-of-service-page {
+    @apply flex flex-col min-h-screen;
+    .terms-of-service-container {
+      @apply flex flex-col bg-white shadow-md rounded-lg overflow-hidden w-3/4 p-8 mt-16 mb-16 self-center;
+      h1 {
+        @apply text-4xl font-bold text-[#1F0084] mb-6;
+      }
+      h2 {
+        @apply text-2xl font-bold text-[#1F0084] mb-4 mt-6;
+      }
+      p {
+        @apply text-gray-600 font-medium mb-4;
+      }
+    }
+  }
+  .terms-of-service-page-Arabic {
+    @apply text-end;
+    .terms-of-service-container {
+      @apply text-end;
+      h1 {
+        @apply text-end;
+      }
+      h2 {
+        @apply text-end;
+      }
+      p {
+        @apply text-end;
+      }
+    }
+  }
+  /*------------------ FAQ --------------------*/
+  .faq-page {
+    @apply flex flex-col min-h-screen;
+    .faq-container {
+      @apply flex flex-col bg-white shadow-md rounded-lg overflow-hidden w-3/4 p-8 mt-16 mb-16 self-center;
+      h1 {
+        @apply text-4xl font-bold text-[#1F0084] mb-6;
+      }
+      h2 {
+        @apply text-2xl font-bold text-[#1F0084] mb-4 mt-6;
+      }
+      p {
+        @apply text-gray-600 font-bold mb-4;
+      }
+    }
+  }
+  /*---------------------------auth-screen----------------------------*/
+  .auth-screen {
+    @apply flex flex-col h-screen justify-center items-center  bg-gray-100;
+    h2 {
+      @apply text-lg text-gray-500 font-medium  mb-6 text-center;
+    }
+    form {
+      @apply flex flex-col  space-y-10;
+
+      div {
+        @apply flex space-x-10;
+        input {
+          @apply bg-transparent w-12 h-12 text-center text-2xl border-b border-black  focus:outline-none focus:ring-2 focus:ring-[#1F0084];
+        }
+      }
+      button {
+        @apply bg-[#1F0084] text-white px-12  py-2 rounded hover:bg-[#FF5545] transition duration-300 self-center disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-[#1F0084];
+      }
+    }
+    .resend-code {
+      @apply mt-6 text-center text-sm text-gray-600;
+      button {
+        @apply text-[#1F0084] font-semibold hover:underline;
+      }
+    }
+  }
+  .auth-screen-Arabic {
+    @apply text-end;
+    h2 {
+      @apply text-end;
+    }
+    form {
+      @apply text-end;
+      div {
+        @apply flex space-x-10 justify-end;
+        input {
+          @apply text-end;
+        }
+      }
+    }
+  }
+  .auth-screen input::placeholder {
+    text-align: center;
+    color: grey-400;
+  }
+  /*---------------------------Dashboard----------------------------*/
+  .dashboard-page {
+    @apply grid grid-cols-[15rem_1fr] bg-white min-h-screen;
+    .dashboard-sidebar {
+      @apply col-start-1 row-start-1 row-span-2 bg-gradient-to-b
+       from-[#3F2BA0] to-[#3556B1] text-white flex flex-col;
+      .dashboard-sidebar-logo-container {
+        @apply flex flex-col items-center justify-center p-4 border-b border-white mb-10;
+        img {
+          @apply h-32 w-32 mr-2;
+        }
+      }
+      .dashboard-sidebar-links {
+        @apply flex flex-col items-start p-4 space-y-6;
+        a {
+          @apply text-lg font-semibold hover:text-orange-500 transition;
+        }
+        ul {
+          @apply list-none w-full space-y-5;
+        }
+      }
+    }
+  }
+
   /* ------------------------Footer-------------------------------------- */
 
   .footer {

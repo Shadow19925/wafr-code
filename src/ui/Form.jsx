@@ -1,43 +1,48 @@
-import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 
 export default function Form({
+  initialValues,
+  submitLabel,
+  onFormSubmit,
   fields,
-  initialValues = {},
-  onSubmit,
-  submitLabel = "Submit",
 }) {
-  const [values, setValues] = useState(initialValues);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    getValues,
+    formState: { errors },
+  } = useForm({ defaultValues: initialValues });
 
-  const handleChange = (e) => {
-    setValues({ ...values, [e.target.name]: e.target.value });
+  const { i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
+  const onSubmit = (data) => {
+    onFormSubmit(data);
+    reset(initialValues);
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(values);
-  };
-
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      className={`form ${currentLanguage === "ar" ? "login-page-Arabic" : ""}`}
+      onSubmit={handleSubmit(onSubmit)}
+    >
       {fields.map((field) => (
-        <div key={field.name} className="mb-4">
-          <label className="block mb-1">{field.label}</label>
+        <>
+          <label htmlFor={field.name}>{field.label}</label>
           <input
-            type={field.type || "text"}
-            name={field.name}
-            value={values[field.name] || ""}
-            onChange={handleChange}
-            className="px-2 py-1 border rounded w-full"
-            {...field.inputProps}
+            id={field.name}
+            placeholder={field.placeholder}
+            type={field.type}
+            key={field.name}
+            {...register(field.name, field.inputProps)}
           />
-        </div>
+          {errors[field.name] && (
+            <span className="error">{errors[field.name].message}</span>
+          )}
+        </>
       ))}
-      <button
-        type="submit"
-        className="bg-blue-500 px-4 py-2 rounded text-white"
-      >
-        {submitLabel}
-      </button>
+      <button type="submit">{submitLabel}</button>
     </form>
   );
 }

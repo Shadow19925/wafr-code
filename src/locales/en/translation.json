@@ -67,5 +67,101 @@
       "title": "User-Friendly Platform",
       "description": "Our platform is designed to be easy to navigate, making it simple for you to find and use discount codes."
     }
+  },
+
+  "login": {
+    "title": "Login",
+    "submit": "Login",
+    "fields": {
+      "email": {
+        "label": "Email",
+        "placeholder": "Enter your email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Enter your password",
+        "required": "Password must not be empty",
+        "minLength": "Password must be at least 8 characters",
+        "maxLength": "Password must not exceed 30 characters",
+        "empty": "Password must not be empty"
+      }
+    },
+    "signupPrompt": "Don't have an account?",
+    "signupLink": "Sign up",
+    "goBack": "Go Back to Home",
+    "forgotPassword": "Forgot Password?"
+  },
+  "auth": {
+    "enterConfirmationCode": "Enter Confirmation Code",
+    "verify": "Verify",
+    "didntReceiveCode": "Didn't receive the code?",
+    "re-sendCode": "Resend Code؟",
+    "cancel": "Back"
+  },
+  "aboutUs": {
+    "title1": "Who We Are – Waffar Code",
+    "description": "Welcome to Waffar Code, your first destination for smart savings and exclusive deals. Our idea started from the need of shoppers for a trusted place that gathers the best discount codes and real offers in one platform—away from unreliable codes or repeated promotions.",
+
+    "title2": "Our Mission",
+    "mission": "At Waffar Code, we provide exclusive discount codes in collaboration with top local and international stores, along with tracking the latest daily deals and offers in various categories such as fashion, electronics, travel, health, beauty, food, and more.\nOur goal is to make it easier for users to access real discounts that save them money and time, while enjoying a more fun and secure online shopping experience.",
+
+    "title3": "Our Vision",
+    "vision": "We aim to be the leading choice for digital savings and smart shopping in the region—offering customers the confidence that every deal or discount code we share is a real opportunity to save, while giving stores the chance to connect with a serious and engaged audience.",
+
+    "title4": "Our Message",
+    "message": "Our message is to make every online purchase an opportunity for savings, through a trusted and user-friendly platform that combines innovation, transparency, and attention to user needs.",
+
+    "title5": "Why Choose Waffar Code?",
+    "whyChooseUs": "Because we ensure all codes are valid and constantly updated. Because we work directly with stores to guarantee real and strong offers. Because we save you the hassle of long searches by bringing everything you need into one place. Because we are a Saudi platform with a modern vision and a global approach."
+  },
+  "tarmOfService": {
+    "title": "Terms of Service",
+    "introduction": "Welcome to Waffer Code. By using our services, you agree to these Terms of Service. Please read them carefully before proceeding.",
+
+    "sections": {
+      "useOfService": "Use of Service: You may use our platform to search for discount codes and offers. The use of our services for any illegal or unauthorized purpose is strictly prohibited.",
+      "accountResponsibility": "Account Responsibility: You are responsible for maintaining the confidentiality of your login information and all activities under your account.",
+      "contentAccuracy": "Content Accuracy: We strive to provide accurate and updated information, but we do not guarantee that all codes or offers will always be available or correct.",
+      "thirdPartyLinks": "Third-Party Links: Our site may contain links to third-party websites. We are not responsible for their content or privacy practices.",
+      "terminationOfService": "Termination of Service: We reserve the right to suspend or terminate your access at any time without prior notice if these terms are violated.",
+      "limitationOfLiability": "Limitation of Liability: We are not liable for any direct or indirect damages resulting from the use or inability to use our services.",
+      "changesToTerms": "Changes to Terms: We may update these terms at any time. Continued use of the site means acceptance of the updated terms.",
+      "governingLaw": "Governing Law: These terms are governed by the laws of the Kingdom of Saudi Arabia."
+    },
+
+    "subscriptions": {
+      "title": "Subscriptions",
+      "subscriptionTerms": "By using the paid subscription service, you agree to the following terms:",
+      "subscriptionDetails": "Subscription Details: We provide different subscription plans with exclusive offers. Please review each plan before subscribing.",
+      "paymentTerms": "Payment Terms: Subscription fees are charged in advance. Refunds are only possible in limited cases as outlined in our refund policy.",
+      "cancellationPolicy": "Cancellation Policy: You may cancel your subscription at any time, but fees already paid are non-refundable.",
+      "renewalTerms": "Renewal Terms: Your subscription will renew automatically unless canceled before the renewal date.",
+      "modificationOfService": "Modification of Service: We may modify or discontinue subscription services at any time without prior notice.",
+      "userResponsibility": "User Responsibility: You must keep your account and payment details secure and not share your subscription with others.",
+      "terminationOfSubscription": "Termination of Subscription: We reserve the right to terminate your subscription for violating these terms.",
+      "contactForSubscription": "For inquiries about subscription terms, please contact us through the support page."
+    },
+
+    "coupons": {
+      "title": "Coupons",
+      "couponTerms": "Some discount codes may be limited in time or quantity. The platform is not responsible if codes are canceled or stopped by the store."
+    },
+
+    "dataUsageAgreement": "Data & Privacy: I agree that my data (such as email and phone number) may be used to operate the service and contact me, in compliance with the Saudi Data Protection Law.",
+
+    "intellectualProperty": "Intellectual Property: All rights (name, logo, and content) belong to the platform. You may not copy or reuse them without permission.",
+
+    "contactUs": "If you have any questions or concerns about these Terms of Service, please contact us via the support page."
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions (FAQ)",
+    "q1": {
+      "question": "What is WAFR Code?",
+      "answer": "WAFR Code is a platform that provides exclusive discount codes and offers from various local and international stores, helping users save money while shopping online."
+    },
+    "q2": {
+      "question": "How do I use a discount code?",
+      "answer": "To use a discount code, simply copy the code from our platform and paste it during the checkout process on the store's website."
+    }
   }
 }

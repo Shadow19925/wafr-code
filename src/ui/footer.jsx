@@ -24,15 +24,22 @@ export default function Footer() {
 
       <div className="footer-content">
         <p>{i18n.t("footer.contactUs")}</p>
-        <p>{i18n.t("footer.ourStores")}</p>
-
-        <p>{i18n.t("footer.termsOfService")}</p>
+        <Link to="/stores">
+          <p>{i18n.t("footer.ourStores")}</p>
+        </Link>
+        <Link to="/terms">
+          <p>{i18n.t("footer.termsOfService")}</p>
+        </Link>
         <p>{i18n.t("footer.followUs")}</p>
       </div>
 
       <div className="footer-content">
-        <p>{i18n.t("footer.frequentlyAskedQuestions")}</p>
-        <p>{i18n.t("footer.subscription")}</p>
+        <Link to="/faq">
+          <p>{i18n.t("footer.frequentlyAskedQuestions")}</p>
+        </Link>
+        <Link to="/subscription">
+          <p>{i18n.t("footer.subscription")}</p>
+        </Link>
         <p>{i18n.t("footer.privacyPolicy")}</p>
         <div className="footer-socials">
           <a href="#" className="footer-social-link">
