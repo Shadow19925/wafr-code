@@ -24,7 +24,7 @@ export default function Form({
   };
   return (
     <form
-      className={`form ${currentLanguage === "ar" ? "login-page-Arabic" : ""}`}
+      className={`form  ${currentLanguage === "ar" ? "login-page-Arabic" : ""}`}
       onSubmit={handleSubmit(onSubmit)}
     >
       {fields.map((field) => (

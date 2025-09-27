@@ -13,6 +13,11 @@ import Dashboard from "./pages/dashboard/Dashboard";
 import TermOfService from "./pages/tearmOfService/termOfService";
 import FAQ from "./pages/frequentlyAsked Question/raq";
 import JoinUs from "./pages/joinUs/JoinUs";
+import Settings from "./pages/dashboard/Settings";
+
+import Analytics from "./pages/dashboard/Analytics";
+import ActiveCoupons from "./pages/dashboard/ActiveCoupons";
+import UpcomingCoupons from "./pages/dashboard/UpcomingCoupons";
 export default function App() {
   // const { lang } = useParams();
   // const { i18n } = useTranslation();
@@ -37,7 +42,18 @@ export default function App() {
         { path: "terms", element: <TermOfService /> },
         { path: "faq", element: <FAQ /> },
         { path: "join", element: <JoinUs /> },
-        { path: "dashboard", element: <Dashboard /> },
+        {
+          path: "dashboard",
+          element: <Dashboard />,
+          children: [
+            // Changed from children={ to children: [
+            { index: true, element: <Analytics /> },
+            { path: "analytics", element: <Analytics /> },
+            { path: "active-coupons", element: <ActiveCoupons /> },
+            { path: "upcoming-coupons", element: <UpcomingCoupons /> },
+            { path: "settings", element: <Settings /> },
+          ], // Changed from } to ]
+        },
       ],
     },
   ]);
