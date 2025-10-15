@@ -1,34 +1,11 @@
 import DomainVerificationIcon from "@mui/icons-material/DomainVerification";
 import PublishIcon from "@mui/icons-material/Publish";
 import UpcomingIcon from "@mui/icons-material/Upcoming";
+import partners from "../../assets/images/Partners";
 
 import CardInfoCard from "../../ui/CardInfoCard";
-import CustomTable from "../../ui/Table";
-import CardItem from "../../ui/CardItem";
-
-const columns = [
-  { id: "id", label: "ID" },
-  { id: "ActiveCoupons", label: "Active Coupons" },
-  { id: "UpcomingCoupons", label: "Upcoming Coupons" },
-];
-
-const rows = [
-  { id: 1, ActiveCoupons: "BLACKFRIDAY", UpcomingCoupons: "WINTERSALE" },
-  { id: 2, ActiveCoupons: "CYBERMONDAY", UpcomingCoupons: "SPRINGSALE" },
-  { id: 3, ActiveCoupons: "NEWYEAR", UpcomingCoupons: "SUMMERSALE" },
-  { id: 4, ActiveCoupons: "SUMMERSALE", UpcomingCoupons: "WINTERDEAL" },
-  { id: 5, ActiveCoupons: "WINTERDEAL", UpcomingCoupons: "FREESHIP" },
-  { id: 6, ActiveCoupons: "FREESHIP", UpcomingCoupons: "BUY1GET1" },
-  { id: 7, ActiveCoupons: "BUY1GET1", UpcomingCoupons: "SPRINGSALE" },
-  { id: 8, ActiveCoupons: "SPRINGSALE", UpcomingCoupons: "SUMMERSALE" },
-  { id: 9, ActiveCoupons: "FLASHSALE", UpcomingCoupons: "WINTERDEAL" },
-  { id: 10, ActiveCoupons: "HOLIDAY20", UpcomingCoupons: "FREESHIP" },
-  { id: 11, ActiveCoupons: "WAFR2024", UpcomingCoupons: "BUY1GET1" },
-  { id: 12, ActiveCoupons: "EXTRA10", UpcomingCoupons: "SPRINGSALE" },
-  { id: 13, ActiveCoupons: "SAVE15", UpcomingCoupons: "SUMMERSALE" },
-  { id: 14, ActiveCoupons: "DISCOUNT5", UpcomingCoupons: "WINTERDEAL" },
-  { id: 15, ActiveCoupons: "SPECIALOFFER", UpcomingCoupons: "FREESHIP" },
-];
+//import CustomTable from "../../ui/Table";
+import CouponDetails from "../../ui/CouponDetails";
 
 export default function Analytics() {
   return (
@@ -56,11 +33,26 @@ export default function Analytics() {
       </div>
       <div className="cards-container">
         <div className="bigCard">
-          <h4 className="mb-4">Coupons Details</h4>
-          <CardItem title="Total" value="60" logoURL="/path/to/logo1.png" />
+          <h4 className="mb-4">Active Coupons </h4>
+          {partners.map((logo, index) => (
+            <CouponDetails
+              key={index}
+              StoreName={logo.name}
+              discount={"50%"}
+              storeIcon={logo.image}
+            />
+          ))}
         </div>
         <div className="smallCard">
-          <h4 className="mb-4">Coupons Summary</h4>
+          <h4 className="mb-4"> upcoming Coupons </h4>
+          {partners.map((logo, index) => (
+            <CouponDetails
+              key={index}
+              StoreName={logo.name}
+              discount={"will  be available soon"}
+              storeIcon={logo.image}
+            />
+          ))}
         </div>
       </div>
 
