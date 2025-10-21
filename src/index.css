@@ -568,7 +568,7 @@
       .dashboard-sidebar-links {
         @apply flex flex-col items-start p-4 space-y-8 flex-1;
         a {
-          @apply font-semibold hover:text-[#37b6f1] transition flex items-center space-x-3;
+          @apply font-medium text-sm hover:text-[#37b6f1] transition flex items-center space-x-3;
 
           &.active {
             @apply text-[#37b6f1] bg-white bg-opacity-10 rounded-lg px-3 py-2;
@@ -580,7 +580,7 @@
           ul {
             @apply list-none w-full flex flex-col flex-1; /* Add flex-1 */
             li {
-              @apply mb-10;
+              @apply mb-10 font-medium;
             }
 
             li:last-child {
@@ -599,6 +599,11 @@
 
     .analytics-page {
       @apply flex flex-col  h-screen p-8;
+
+      .top-cards {
+        @apply flex justify-evenly gap-6 mt-7 w-full;
+      }
+
       h2 {
         @apply text-4xl font-bold text-[#1F0084] mb-6;
       }
@@ -674,6 +679,14 @@
         }
       }
     }
+    .pie-chart-with-title {
+      @apply text-left mb-6 p-5;
+
+      .pie-chart-title {
+        @apply text-xl font-bold text-[#1F0084] mb-4;
+      }
+    }
+
     /* .table-container {
       @apply bg-white shadow-md rounded-lg p-6 flex  mt-12 gap-x-5;
     } */
@@ -682,24 +695,28 @@
       h3 {
         @apply text-2xl font-bold text-[#1F0084] mb-4  p-5;
       }
-      .filter {
-        @apply flex items-center justify-between mb-4;
-        .filter-options {
-          @apply flex items-center space-x-4;
 
-          input {
-            @apply border border-gray-300 rounded  px-3 py-2  focus:outline-none focus:ring-2 focus:ring-[#1F0084];
-          }
-          .search-input-container {
-            @apply flex items-center space-x-2;
-            button {
-              @apply bg-[#1F0084] text-white px-4 py-2 rounded hover:bg-[#FF5545] transition duration-300;
-            }
-          }
-        }
-      }
       .stores-container {
         @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8;
+      }
+    }
+    .filter {
+      @apply flex items-center justify-between mb-4;
+      .filter-title {
+        @apply text-2xl font-bold text-[#1F0084];
+      }
+      .filter-options {
+        @apply flex items-center space-x-4;
+
+        input {
+          @apply border border-gray-300 rounded  px-3 py-2  focus:outline-none focus:ring-2 focus:ring-[#1F0084];
+        }
+        .search-input-container {
+          @apply flex items-center space-x-2;
+          button {
+            @apply bg-[#1F0084] text-white px-4 py-2 rounded hover:bg-[#FF5545] transition duration-300;
+          }
+        }
       }
     }
   }
@@ -740,6 +757,47 @@
     .offer-info {
       @apply flex   mb-6 justify-between items-center;
     }
+  }
+  /*------------------ data Grid page --------------------*/
+  .data-grid-page {
+    @apply flex flex-col min-h-screen;
+    .data-grid-container {
+      @apply flex flex-col bg-white shadow-md rounded-lg overflow-hidden 
+      w-3/4 p-8 mt-16 mb-16 self-center;
+      h1 {
+        @apply text-4xl font-bold text-[#1F0084] mb-6;
+      }
+      h2 {
+        @apply text-2xl font-bold text-[#1F0084] mb-4 mt-6;
+      }
+      p {
+        @apply text-gray-600 font-medium mb-4;
+      }
+    }
+  }
+  /*------------------ General Button --------------------*/
+  .btn {
+    @apply rounded-lg font-semibold shadow transition-colors;
+  }
+
+  .btn-small {
+    @apply text-xs py-1 px-2 uppercase font-semibold text-center;
+  }
+  .btn-medium {
+    @apply text-sm py-3 px-4 font-medium;
+  }
+  .btn-large {
+    @apply text-base py-3 px-6 font-medium;
+  }
+
+  .btn-primary {
+    @apply text-white bg-[#1F0084] hover:bg-[#37b6f1];
+  }
+  .btn-secondary {
+    @apply text-[#51586b] bg-[#F3F4F6] border border-[#E5E7EB] hover:bg-[#b8bdc7];
+  }
+  .btn-danger {
+    @apply text-white bg-red-700 hover:bg-red-800;
   }
 
   /*------------------settings page--------------------*/

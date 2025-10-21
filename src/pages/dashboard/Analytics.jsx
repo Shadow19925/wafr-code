@@ -6,12 +6,15 @@ import partners from "../../assets/images/Partners";
 import CardInfoCard from "../../ui/CardInfoCard";
 //import CustomTable from "../../ui/Table";
 import CouponDetails from "../../ui/CouponDetails";
+import Filter from "../../ui/Filter";
 
 export default function Analytics() {
   return (
     <div className="analytics-page">
-      <h2>Analytics Overview</h2>
-      <div className="flex justify-evenly gap-6 mt-7 w-full">
+      <Filter>
+        <Filter.Title>Analytics</Filter.Title>
+      </Filter>
+      <div className="top-cards">
         <CardInfoCard
           title="Total Used Coupons"
           value="60"

@@ -1,14 +1,12 @@
 import Logo from "../assets/images/Logo-image.png";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router";
 
-import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import HomeIcon from "@mui/icons-material/Home";
-import SettingsIcon from "@mui/icons-material/Settings";
+// import CardGiftcardIcon from "@mui/icons-material/CardGiftcard";
+// import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+// import HomeIcon from "@mui/icons-material/Home";
+// import SettingsIcon from "@mui/icons-material/Settings";
 
-export default function SideBar() {
-  const location = useLocation();
+export default function SideBar({ children }) {
   const { i18n } = useTranslation();
   return (
     <aside className="dashboard-sidebar">
@@ -17,7 +15,8 @@ export default function SideBar() {
         <h1 className="font-bold text-xl">{i18n.t("AppName")}</h1>
       </div>
       <div className="dashboard-sidebar-links">
-        <nav>
+        <nav>{children}</nav>
+        {/* {<nav>
           <ul>
             <li>
               <Link
@@ -69,7 +68,7 @@ export default function SideBar() {
               </Link>
             </li>
           </ul>
-        </nav>
+        </nav>} */}
       </div>
     </aside>
   );

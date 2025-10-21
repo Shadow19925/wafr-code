@@ -7,7 +7,15 @@ export default function ActiveCoupons() {
   return (
     <>
       <div className="active-coupons">
-        <Filter title={"Active Coupon"} />
+        <Filter>
+          <Filter.Title>Active Coupon</Filter.Title>
+          <Filter.Options>
+            <Filter.SearchBar
+              onSearch={(term) => console.log("Searching for:", term)}
+            />
+            <Filter.Icon />
+          </Filter.Options>
+        </Filter>
         <div className="stores-page">
           <div className="stores-container">
             <StoreItem2

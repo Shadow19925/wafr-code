@@ -18,6 +18,15 @@ import Settings from "./pages/dashboard/Settings";
 import Analytics from "./pages/dashboard/Analytics";
 import ActiveCoupons from "./pages/dashboard/ActiveCoupons";
 import UpcomingCoupons from "./pages/dashboard/UpcomingCoupons";
+
+import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminCoupons from "./pages/admin/CouponsManagement";
+import AdminUsers from "./pages/admin/UsersManagement";
+import AdminStores from "./pages/admin/StoresManagement";
+import AdminSiteSettings from "./pages/admin/AdminSiteSettings";
+import AdminAnalytics from "./pages/admin/AdminAnalytics";
+import FileLibrary from "./pages/admin/FileLibrary";
+import Reports from "./pages/admin/Reports";
 export default function App() {
   // const { lang } = useParams();
   // const { i18n } = useTranslation();
@@ -52,7 +61,22 @@ export default function App() {
             { path: "active-coupons", element: <ActiveCoupons /> },
             { path: "upcoming-coupons", element: <UpcomingCoupons /> },
             { path: "settings", element: <Settings /> },
+            { path: "reports", element: <Reports /> },
           ], // Changed from } to ]
+        },
+        {
+          path: "admin",
+          element: <AdminDashboard />,
+          children: [
+            { index: true, element: <AdminAnalytics /> },
+            { path: "analytics", element: <AdminAnalytics /> },
+
+            { path: "coupons", element: <AdminCoupons /> },
+            { path: "users", element: <AdminUsers /> },
+            { path: "stores", element: <AdminStores /> },
+            { path: "site-settings", element: <AdminSiteSettings /> },
+            { path: "file-library", element: <FileLibrary /> },
+          ],
         },
       ],
     },

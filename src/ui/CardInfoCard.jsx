@@ -1,6 +1,6 @@
 export default function CardInfoCard({ title, value, icon, color }) {
   return (
-    <div className={`card-info-card`}>
+    <div className="card-info-card">
       <div className="icon" style={{ backgroundColor: color }}>
         {icon}
       </div>

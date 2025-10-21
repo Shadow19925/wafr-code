@@ -5,7 +5,15 @@ import storeImage from "../../assets/images/namshi-store.png";
 export default function UpcomingCoupons() {
   return (
     <div className="active-coupons">
-      <Filter title={"Upcoming Coupon"} />
+      <Filter>
+        <Filter.Title>Upcoming Coupon</Filter.Title>
+        <Filter.Options>
+          <Filter.SearchBar
+            onSearch={(term) => console.log("Searching for:", term)}
+          />
+          <Filter.Icon />
+        </Filter.Options>
+      </Filter>
       <div className="stores-page">
         <div className="stores-container">
           {Array.from({ length: 8 }).map((_, index) => (

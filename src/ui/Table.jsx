@@ -10,10 +10,13 @@ import { styled } from "@mui/material/styles";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    background: "linear-gradient(to bottom, #060607, #51586b)",
-    color: theme.palette.common.white,
+    background: "#F3F4F6",
+    color: "#1F0084",
+    fontWeight: "bold",
   },
   [`&.${tableCellClasses.body}`]: {
+    background: "#fff", // Ensure body cells are white
+    color: "#1F0084",
     fontSize: 14,
   },
 }));

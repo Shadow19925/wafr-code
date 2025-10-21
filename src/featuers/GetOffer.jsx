@@ -2,7 +2,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import SendIcon from "@mui/icons-material/Send";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
-function GetOffer({ offerId = "1", closeModal, isopen }) {
+function Modal({ closeModal, isopen }) {
   const close = () => closeModal(false);
 
   // Mock data - will be replaced with real API call later
@@ -68,4 +68,4 @@ function GetOffer({ offerId = "1", closeModal, isopen }) {
   );
 }
 
-export default GetOffer;
+export default Modal;
