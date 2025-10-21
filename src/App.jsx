@@ -76,6 +76,7 @@ export default function App() {
             { path: "stores", element: <AdminStores /> },
             { path: "site-settings", element: <AdminSiteSettings /> },
             { path: "file-library", element: <FileLibrary /> },
+            { path: "reports", element: <Reports /> },
           ],
         },
       ],

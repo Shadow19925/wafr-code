@@ -1,7 +1,7 @@
 import FilterAltOutlinedIcon from "@mui/icons-material/FilterAltOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import { useState, useContext, createContext } from "react";
-
+import FilterListRoundedIcon from "@mui/icons-material/FilterListRounded";
 const FilterContext = createContext();
 
 export default function Filter({ children }) {
@@ -68,4 +68,34 @@ Filter.Icon = function Icon() {
 
 Filter.Options = function Options({ children }) {
   return <div className="filter-options">{children}</div>;
+};
+
+Filter.Sort = function Sort({ onSort, render }) {
+  const [openSortOptions, setOpenSortOptions] = useState(false);
+
+  function handleSort() {
+    setOpenSortOptions(!openSortOptions);
+    if (onSort) onSort();
+  }
+  return (
+    <>
+      <FilterListRoundedIcon className="sort-icon" onClick={handleSort} />
+      {openSortOptions && (
+        <div className="options-dropdown">
+          {/* Sort options can be added here */}
+
+          {render ? (
+            render()
+          ) : (
+            <ul onClick={handleSort}>
+              <li>Sort Options Here</li>
+              <li>
+                <button onClick={handleSort}>Close</button>
+              </li>
+            </ul>
+          )}
+        </div>
+      )}
+    </>
+  );
 };

@@ -41,13 +41,13 @@ export default function AdminDashboard() {
             </Link>
           </li>
           <li>
-            <Link to="users">
+            <Link to="reports">
               <ContentPasteGoOutlinedIcon />
               <p>Reports</p>
             </Link>
           </li>
           <li>
-            <Link to="stores">
+            <Link to="file-library">
               {" "}
               <PermMediaOutlinedIcon />
               <p>File Library</p>
